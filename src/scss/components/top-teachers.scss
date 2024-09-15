@@ -108,6 +108,15 @@
   border-radius: 100%;
   overflow: hidden;
   border: 3px solid $color-orange;
+  aspect-ratio: 1 / 1;
+
+  p {
+    color: $color-orange;
+    font-weight: bold;
+    justify-self: center;
+    font-size: 250%;
+    margin: auto;
+  }
 
   img {
     width: 100%;

@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68e7cf5-741e-43a8-a1cf-763e7fbe62e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/empty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "lab1",
-    "last_opened_file_path": "C:/Users/KINGO/Desktop/Web-Task",
+    "last_opened_file_path": "C:/Users/KINGO/Desktop/web",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -93,7 +88,10 @@
       <workItem from="1725874826723" duration="1569000" />
       <workItem from="1725970008449" duration="5089000" />
       <workItem from="1726053246088" duration="5209000" />
-      <workItem from="1726145926755" duration="3735000" />
+      <workItem from="1726145926755" duration="5036000" />
+      <workItem from="1726198688632" duration="7730000" />
+      <workItem from="1726304606090" duration="42000" />
+      <workItem from="1726413642969" duration="62000" />
     </task>
     <servers />
   </component>
