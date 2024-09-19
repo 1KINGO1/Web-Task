@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68e7cf5-741e-43a8-a1cf-763e7fbe62e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/test-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/test-module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
       <list>
         <option value="package.json" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -38,29 +42,32 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab1",
-    "last_opened_file_path": "C:/Users/KINGO/Desktop/web",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "C:\\Users\\KINGO\\Desktop\\web\\node_modules\\stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\KINGO\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KINGO/Desktop/Web-Task/src/scripts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Users\\KINGO\\Desktop\\web\\node_modules\\stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\KINGO\\Desktop\\Web-Task\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts" />
       <recent name="C:\Users\KINGO\Desktop\web\src\images" />
       <recent name="C:\Users\KINGO\Desktop\web\src\scss\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts" />
+      <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts\mock" />
       <recent name="C:\Users\KINGO\Desktop\web\src\scss" />
     </key>
   </component>
@@ -92,10 +99,24 @@
       <workItem from="1726198688632" duration="7730000" />
       <workItem from="1726304606090" duration="42000" />
       <workItem from="1726413642969" duration="62000" />
+      <workItem from="1726413739283" duration="1357000" />
+      <workItem from="1726415223907" duration="2019000" />
+      <workItem from="1726501700130" duration="2979000" />
+      <workItem from="1726511053326" duration="4784000" />
+      <workItem from="1726576996787" duration="2396000" />
+      <workItem from="1726595225698" duration="1292000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/scripts/serializeUserArray.js" />
+        <option value="$PROJECT_DIR$/src/scripts/types/SerializedUser.js" />
+        <option value="$PROJECT_DIR$/src/scripts/types/Course.js" />
+        <option value="$PROJECT_DIR$/src/scripts/types/User.js" />
+      </list>
+    </option>
   </component>
 </project>

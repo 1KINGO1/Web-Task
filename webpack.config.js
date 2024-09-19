@@ -11,7 +11,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 const CONFIG = {
-  entry: './src/js/app.js',
+  entry: './src/scripts/app.ts',
   mode: process.env.NODE_ENV,
   devtool: 'cheap-module-source-map',
   output: {
@@ -31,7 +31,7 @@ const CONFIG = {
     new HtmlReplaceWebpackPlugin([
       {
         pattern:
-          '<script type="text/javascript" src="../build/app.js"></script>',
+          '<script type="text/javascript" src="../build/app.ts"></script>',
         replacement: '',
       },
       {
@@ -119,7 +119,7 @@ const CONFIG = {
 
 if (!devMode) {
   CONFIG.output.publicPath = './';
-  CONFIG.output.filename = 'js/app.js';
+  CONFIG.output.filename = 'js/app.ts';
   CONFIG.plugins.push(new MinifyPlugin());
   CONFIG.module.rules.push({
     test: [/\.js$/],
