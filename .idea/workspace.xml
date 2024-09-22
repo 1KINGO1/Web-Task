@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a68e7cf5-741e-43a8-a1cf-763e7fbe62e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/test-module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +101,8 @@
       <workItem from="1726511053326" duration="4784000" />
       <workItem from="1726576996787" duration="2396000" />
       <workItem from="1726595225698" duration="1292000" />
+      <workItem from="1726745889862" duration="735000" />
+      <workItem from="1726809989394" duration="4302000" />
     </task>
     <servers />
   </component>
@@ -116,6 +114,13 @@
         <option value="$PROJECT_DIR$/src/scripts/types/SerializedUser.js" />
         <option value="$PROJECT_DIR$/src/scripts/types/Course.js" />
         <option value="$PROJECT_DIR$/src/scripts/types/User.js" />
+        <option value="$PROJECT_DIR$/src/scripts/getInterest.js" />
+        <option value="$PROJECT_DIR$/src/scripts/app.js" />
+        <option value="$PROJECT_DIR$/src/scripts/validateUser.js" />
+        <option value="$PROJECT_DIR$/src/scripts/sortUsersBy.js" />
+        <option value="$PROJECT_DIR$/src/scripts/searchBy.js" />
+        <option value="$PROJECT_DIR$/src/scripts/filterUsersBy.js" />
+        <option value="$PROJECT_DIR$/src/scripts/types/UnserializedUser.js" />
       </list>
     </option>
   </component>
