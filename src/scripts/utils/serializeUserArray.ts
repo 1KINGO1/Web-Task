@@ -1,6 +1,6 @@
-import {SerializedUser} from "./types/SerializedUser";
-import {Course} from "./types/Course";
-import UnserializedUser from "./types/UnserializedUser";
+import {SerializedUser} from "../types/SerializedUser";
+import {Course} from "../types/Course";
+import UnserializedUser from "../types/UnserializedUser";
 
 export function serializeUserArray(users: UnserializedUser[]): SerializedUser[] {
   return users.map((user) => serializeUser(user));

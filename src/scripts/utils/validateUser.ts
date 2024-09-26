@@ -1,4 +1,4 @@
-import {SerializedUser} from "./types/SerializedUser";
+import {SerializedUser} from "../types/SerializedUser";
 
 interface UserValidationResponse {
     valid: boolean;

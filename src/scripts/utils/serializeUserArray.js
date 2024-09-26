@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.serializeUserArray = serializeUserArray;
 exports.connect = connect;
-var Course_1 = require("./types/Course");
+var Course_1 = require("../types/Course");
 function serializeUserArray(users) {
     return users.map(function (user) { return serializeUser(user); });
 }

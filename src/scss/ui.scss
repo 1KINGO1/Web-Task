@@ -20,6 +20,7 @@
 }
 
 .modal__wrapper {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,12 +32,15 @@
   backdrop-filter: blur(4px);
   padding: 20px;
 
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   overflow-y: scroll;
+
+  &.open {
+    display: flex;
+  }
 
   @media screen and (max-height: 1000px) {
     justify-content: flex-start;
