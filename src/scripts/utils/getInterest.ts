@@ -1,4 +1,4 @@
-import {SerializedUser} from "./types/SerializedUser";
+import {SerializedUser} from "../types/SerializedUser";
 import {searchManyBy, SearchParam} from "./searchBy";
 
 function getInterest(users: SerializedUser[], params: SearchParam[]) {

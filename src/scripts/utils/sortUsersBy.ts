@@ -1,4 +1,4 @@
-import {SerializedUser} from "./types/SerializedUser";
+import {SerializedUser} from "../types/SerializedUser";
 
 interface SortParameter {
     key: keyof SerializedUser;
