@@ -1,18 +1,18 @@
 import '../css/app.css';
 import '../scss/index.scss';
 
-import {connect, serializeUserArray} from "./utils/serializeUserArray";
-import {additionalUsers, randomUserMock} from "./mock/mock";
-import UnserializedUser from "./types/UnserializedUser";
+import {serializeUserArray} from "./utils/serializeUserArray";
 import renderUsers from "./renderUsers";
 import addModalCloseHandler from "./addModalCloseHandler";
 import addAddTeacherOpenHandler from "./addAddTeacherOpenHandler";
 import addFilterHandler from "./addFilterHandler";
-import renderUsersTable from "./renderUsersTable";
 import renderStatisticSort from "./renderStatisticSort";
 import addAddTeacherSubmitHandler from "./addAddTeacherSubmitHandler";
 import renderFavorite from "./renderFavorite";
 import addSearchHandler from "./addSearchHandler";
+import {fetchUsers} from "./services/usersService";
+import {SerializedUser} from "./types/SerializedUser";
+import addDowloadMoreButtonHandler from "./addDowloadMoreButtonHandler";
 
 export interface State {
     addTeacherModalOpen: boolean;
@@ -31,16 +31,14 @@ export interface State {
         region: null | SortOrder;
         gender: null | SortOrder;
     },
-    searchValue: string
+    searchValue: string,
+    tablePage: number,
+    usersPage: number
 }
 
 type SortOrder = 'asc' | 'desc';
 
-const users = connect(
-    serializeUserArray(randomUserMock as any as UnserializedUser[]),
-    serializeUserArray(additionalUsers as any as UnserializedUser[])
-);
-
+let users: SerializedUser[] = [];
 const state: State = {
     addTeacherModalOpen: false,
     teacherInfoModalOpen: false,
@@ -58,19 +56,36 @@ const state: State = {
         region: null,
         gender: null,
     },
-    searchValue: ''
+    searchValue: '',
+    tablePage: 0,
+    usersPage: 0
 }
 
-export {state, users};
+function getUsers(){
+    return users;
+}
 
-renderUsers();
-renderUsersTable();
-renderStatisticSort();
-renderFavorite();
+function setUsers(newUsers: SerializedUser[]){
+    users = newUsers;
+}
 
-addModalCloseHandler();
-addAddTeacherOpenHandler();
-addFilterHandler();
-addAddTeacherSubmitHandler();
-addSearchHandler();
+const init = async () => {
+    users = serializeUserArray(await fetchUsers());
 
+    renderUsers();
+    renderStatisticSort();
+    renderFavorite();
+
+    addDowloadMoreButtonHandler();
+
+    addModalCloseHandler();
+    addAddTeacherOpenHandler();
+    addFilterHandler();
+    addAddTeacherSubmitHandler();
+    addSearchHandler();
+}
+
+init();
+
+
+export {state, getUsers, setUsers};

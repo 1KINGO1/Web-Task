@@ -1,8 +1,12 @@
-import {state, users} from "./app";
+import {getUsers, state} from "./app";
 import sortUsersBy from "./utils/sortUsersBy";
 import {SerializedUser} from "./types/SerializedUser";
+import getFilteredUsers from "./utils/getFilteredUsers";
+import renderStatisticPageCount from "./renderStatisticPageCount";
 
 export default function () {
+    const users = getFilteredUsers();
+
     const table = document.querySelector(".statistics__table") as HTMLTableElement;
     if (!table) return;
 
@@ -22,7 +26,7 @@ export default function () {
 
     let stringToInsert = "";
 
-    sortedUsers.forEach(user => {
+    sortedUsers.slice(10 * state.tablePage, 10 * state.tablePage + 10).forEach(user => {
         stringToInsert += `
         <tr>
             <td>${user.full_name}</td>
@@ -35,4 +39,6 @@ export default function () {
     });
 
     tbody.innerHTML = stringToInsert;
+
+    renderStatisticPageCount();
 }

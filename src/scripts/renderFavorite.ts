@@ -1,8 +1,9 @@
-import {state, users} from "./app";
-import sortUsersBy from "./utils/sortUsersBy";
+import {getUsers} from "./app";
 import {SerializedUser} from "./types/SerializedUser";
 
 export default function () {
+    const users = getUsers()
+
     const wrapper = document.getElementById("favorite-item-wrapper") as HTMLDivElement;
 
     wrapper.innerHTML = "";
