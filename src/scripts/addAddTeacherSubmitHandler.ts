@@ -1,11 +1,15 @@
 import {SerializedUser} from "./types/SerializedUser";
 import {serializeUserArray} from "./utils/serializeUserArray";
-import {users} from "./app";
 import renderUsers from "./renderUsers";
 import renderUsersTable from "./renderUsersTable";
 import {Course} from "./types/Course";
+import {getUsers} from "./app";
+import {createUser} from "./services/usersService";
+import renderStatisticPageCount from "./renderStatisticPageCount";
 
 export default function () {
+    const users = getUsers();
+
     const addTeacherModal = document.getElementById('add-teacher-modal') as HTMLFormElement;
     const addTeacherForm = addTeacherModal.getElementsByTagName("form")[0] as unknown as HTMLFormElement;
 
@@ -50,10 +54,18 @@ export default function () {
 
         users.push(user);
 
-        renderUsers();
-        renderUsersTable();
+        try {
+            await createUser(user);
 
-        addTeacherModal.classList.remove('open');
-        document.body.style.overflowY = 'auto';
+            renderUsers();
+            renderUsersTable();
+            renderStatisticPageCount();
+
+            addTeacherModal.classList.remove('open');
+            document.body.style.overflowY = 'auto';
+        }
+        catch (e) {
+            console.error(e);
+        }
     });
 }

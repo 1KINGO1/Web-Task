@@ -96,6 +96,10 @@
     &:hover {
       color: $color-light-cyan-2;
     }
+
+    &.active {
+      color: #0d4c3d;
+    }
   }
 
   button.selected {

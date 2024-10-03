@@ -9,25 +9,14 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/addAddTeacherSubmitHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/addAddTeacherSubmitHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/addFilterHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/addFilterHandler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/filterUsersBy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/filterUsersBy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/filterUsersBy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/filterUsersBy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/getInterest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/getInterest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/getInterest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/getInterest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/searchBy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/searchBy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/searchBy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/searchBy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/serializeUserArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/serializeUserArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/serializeUserArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/serializeUserArray.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/sortUsersBy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/sortUsersBy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/sortUsersBy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/sortUsersBy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/test-module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/validateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/validateUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/validateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/validateUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/favorites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/favorites.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/top-teachers.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/ui.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/renderFavorite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/renderFavorite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/renderUsers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/renderUsers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/renderUsersTable.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/renderUsersTable.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/statistics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/statistics.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,24 +47,24 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.addAddTeacherSubmitHandler.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab3&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/KINGO/Desktop/Web-Task/src/scripts&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Users\\KINGO\\Desktop\\web\\node_modules\\stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\KINGO\\Desktop\\Web-Task\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.addAddTeacherSubmitHandler.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "lab4",
+    "last_opened_file_path": "C:/Users/KINGO/Desktop/Web-Task",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "C:\\Users\\KINGO\\Desktop\\web\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\KINGO\\Desktop\\Web-Task\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts" />
@@ -84,6 +73,7 @@
       <recent name="C:\Users\KINGO\Desktop\web\src\scss\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KINGO\Desktop\Web-Task" />
       <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts\utils" />
       <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts" />
       <recent name="C:\Users\KINGO\Desktop\Web-Task\src\scripts\mock" />
@@ -134,7 +124,14 @@
       <workItem from="1727129553363" duration="802000" />
       <workItem from="1727180702277" duration="2823000" />
       <workItem from="1727192369413" duration="1731000" />
-      <workItem from="1727363892368" duration="1028000" />
+      <workItem from="1727363892368" duration="1230000" />
+      <workItem from="1727605830864" duration="21000" />
+      <workItem from="1727777783446" duration="6934000" />
+      <workItem from="1727805221777" duration="2017000" />
+      <workItem from="1727815067387" duration="279000" />
+      <workItem from="1727890475088" duration="1854000" />
+      <workItem from="1727892364704" duration="9000" />
+      <workItem from="1727952658372" duration="2069000" />
     </task>
     <servers />
   </component>
