@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {SerializedUser} from "../types/SerializedUser";
 
 export interface SearchParam {
@@ -10,40 +11,56 @@ export interface SearchParam {
     has?: boolean;
 }
 
-export function searchOneBy(users: SerializedUser[], params: SearchParam[]): SerializedUser | null{
-    return users.find(user => {
-        return params.every(param => {
-            const value = user[param.key] as any;
-            if (param.lessThan !== undefined && param.lessThan <= value) return false;
-            if (param.has !== undefined && value == null) return false;
-            if (param.greaterThan !== undefined && param.greaterThan >= value) return false;
-            if (param.equals !== undefined && param.equals !== value) return false;
-            if (param.lessThanEquals !== undefined && param.lessThanEquals < value) return false;
-            if (param.greaterThanEquals !== undefined && param.greaterThanEquals > value) return false;
+export function searchOneBy(users: SerializedUser[], params: SearchParam[]): SerializedUser | null {
+    return _.find(users, (user) => {
+        return _.every(params, (param) => {
+            const value = _.get(user, param.key);
+
+            // Check if the key exists based on the 'has' parameter
+            if (param.has !== undefined && ((param.has && value == null) || (!param.has && value != null))) {
+                return false;
+            }
+
+            if (param.lessThan !== undefined && _.lte(param.lessThan, value)) return false;
+            if (param.greaterThan !== undefined && _.gte(param.greaterThan, value)) return false;
+            if (param.equals !== undefined && !_.isEqual(param.equals, value)) return false;
+            if (param.lessThanEquals !== undefined && _.lt(param.lessThanEquals, value)) return false;
+            if (param.greaterThanEquals !== undefined && _.gt(param.greaterThanEquals, value)) return false;
+
             return true;
         });
-    }) ?? null
+    }) ?? null;
 }
 
 export function searchManyBy(users: SerializedUser[], params: SearchParam[]): SerializedUser[] {
-    return users.filter(user => {
-        return params.every(param => {
-            const value = user[param.key] as any;
-            if (param.has !== undefined && value == null) return false;
-            if (param.lessThan !== undefined && param.lessThan <= value) return false;
-            if (param.greaterThan !== undefined && param.greaterThan >= value) return false;
-            if (param.equals !== undefined && param.equals !== value) return false;
-            if (param.lessThanEquals !== undefined && param.lessThanEquals < value) return false;
-            if (param.greaterThanEquals !== undefined && param.greaterThanEquals > value) return false;
+    return _.filter(users, (user) => {
+        return _.every(params, (param) => {
+            const value = _.get(user, param.key);
+
+            // Check if the key exists based on the 'has' parameter
+            if (param.has !== undefined && ((param.has && value == null) || (!param.has && value != null))) {
+                return false;
+            }
+
+            if (param.lessThan !== undefined && _.lte(param.lessThan, value)) return false;
+            if (param.greaterThan !== undefined && _.gte(param.greaterThan, value)) return false;
+            if (param.equals !== undefined && !_.isEqual(param.equals, value)) return false;
+            if (param.lessThanEquals !== undefined && _.lt(param.lessThanEquals, value)) return false;
+            if (param.greaterThanEquals !== undefined && _.gt(param.greaterThanEquals, value)) return false;
+
             return true;
         });
     });
 }
 
 export function searchManyByValue(users: SerializedUser[], value: string): SerializedUser[] {
-    return users.filter(user => {
-        return user.full_name?.toLowerCase().includes(value.toLowerCase()) ||
-            user.age?.toString() === value ||
-            user.note?.includes(value.toLowerCase())
+    const lowerValue = value.toLowerCase();
+
+    return _.filter(users, (user) => {
+        return _.some([
+            _.toLower(_.get(user, 'full_name', '') ?? undefined).includes(lowerValue),
+            _.toString(_.get(user, 'age') ?? undefined).includes(value),
+            _.toLower(_.get(user, 'note', '') ?? undefined).includes(lowerValue)
+        ]);
     });
 }
