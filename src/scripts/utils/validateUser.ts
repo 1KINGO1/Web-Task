@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {SerializedUser} from "../types/SerializedUser";
 
 interface UserValidationResponse {
@@ -17,68 +18,70 @@ function validateUser(user: SerializedUser, phoneRegex?: RegExp): UserValidation
         errors: []
     }
 
-    for (const key of ["full_name", "gender", "note", "state", "city", "country"] as (keyof SerializedUser)[]) {
-        const value = user[key] as string;
+    const stringFields = ["full_name", "gender", "note", "state", "city", "country"] as (keyof SerializedUser)[];
+    const numberFields = ["age"] as (keyof SerializedUser)[];
+    const phoneFields = ["phone"] as (keyof SerializedUser)[];
+    const emailFields = ["email"] as (keyof SerializedUser)[];
 
-        if (typeof value !== "string" || value.length === 0) {
+    // Validate string fields
+    _.forEach(stringFields, (key) => {
+        const value = _.get(user, key, "") as string;
+
+        if (!_.isString(value) || _.isEmpty(value)) {
             response.valid = false;
             response.errors.push({
                 key: key,
                 message: "Must be a non-empty string"
             });
-            continue;
-        }
-
-        if (value[0].toUpperCase() !== value[0]) {
+        } else if (!_.startsWith(value, _.toUpper(_.head(value)))) {
             response.valid = false;
             response.errors.push({
                 key: key,
                 message: "Must start with an uppercase letter"
             });
-            continue;
         }
-    }
+    });
 
-    for (const key of ["age"] as (keyof SerializedUser)[]) {
-        const value = user[key] as number;
+    // Validate number fields
+    _.forEach(numberFields, (key) => {
+        const value = _.get(user, key, NaN) as number;
 
-        if (isNaN(value)) {
+        if (!_.isNumber(value) || _.isNaN(value)) {
             response.valid = false;
             response.errors.push({
                 key: key,
                 message: "Must be a number"
             });
-            continue;
         }
-    }
+    });
 
+    // Validate phone if regex is provided
     if (phoneRegex) {
-        for (const key of ["phone"] as (keyof SerializedUser)[]) {
-            const value = user[key] as string;
+        _.forEach(phoneFields, (key) => {
+            const value = _.get(user, key, "") as string;
 
-            if (typeof value !== "string" || !phoneRegex.test(value)) {
+            if (!_.isString(value) || !phoneRegex.test(value)) {
                 response.valid = false;
                 response.errors.push({
                     key: key,
                     message: "Incorrect phone number"
                 });
-                continue;
             }
-        }
+        });
     }
 
-    for (const key of ["email"] as (keyof SerializedUser)[]) {
-        const value = user[key] as string;
+    // Validate email field
+    _.forEach(emailFields, (key) => {
+        const value = _.get(user, key, "") as string;
 
-        if (typeof value !== "string" || !/[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}/.test(value)) {
+        if (!_.isString(value) || !/^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/.test(value)) {
             response.valid = false;
             response.errors.push({
                 key: key,
                 message: "Incorrect email format"
             });
-            continue;
         }
-    }
+    });
 
     return response;
 }

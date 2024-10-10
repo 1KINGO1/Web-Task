@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project</title>
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
@@ -178,6 +179,7 @@
         </section>
         <section class="section statistics">
             <h2 class="section__title">Statistics</h2>
+            <canvas class="statistics__chart"></canvas>
             <table class="statistics__table">
                 <thead>
 
@@ -492,9 +494,9 @@
                     </div>
                 </div>
                 <div class="teacher-info__footer">
-                    <a href="#">
+                    <button class="teacher-info__toggle-map-button">
                         Toggle map
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
